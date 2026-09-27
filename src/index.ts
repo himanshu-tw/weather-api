@@ -6,4 +6,4 @@ app.get("/", (req, res) => {
     res.json({ msg: "hello world" });
 });
 
-app.listen("8000", console.log("server is running"));
+app.listen("8000", () => console.log("server is running"));
