@@ -1,7 +1,5 @@
 import { createClient } from "redis";
 
-const client = createClient();
-
-client.on('error', err => console.log(err));
-
-await client.connect();
+const client = await createClient()
+  .on("error", (err) => console.log("Redis Client Error", err))
+  .connect();
