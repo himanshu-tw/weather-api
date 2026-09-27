@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Define the rate limiting rule
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes in milliseconds
+  windowMs: 1 * 60 * 1000, // 15 minutes in milliseconds
   max: 100, // Limit each IP to 100 requests per `window`
   message: {
     status: 429,
